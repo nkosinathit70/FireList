@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Name:</ion-label>
+            <ion-input [(ngModel)]="name"></ion-input>
+        </ion-item>
+
+        <button ion-button default (click)="onCruisines('name')">Push</button>
+
+    </ion-list>
+    <ion-list>
+        <ion-item class="text" *ngFor="let item of items | async">
+            {{item | json}}
+        </ion-item>
+    </ion-list>
+</ion-content>
